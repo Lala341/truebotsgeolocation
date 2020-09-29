@@ -378,6 +378,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
                 crossDomain:true,
                         
                 success: function(t) {
+                    window.close();
                     console.log(t);
                     MessengerExtensions.requestCloseBrowser(function success() {
                         // webview closed
