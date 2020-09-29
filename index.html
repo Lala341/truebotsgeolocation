@@ -385,12 +385,16 @@ function closeWindow() {
                     console.log(t);
                      window.open('', '_self', ''); 
     window.close();
+                    alert("La información fue almacenada con éxito, puedes cerrar la ventana.");
+                    document.getElementById("block").disabled = true;
                 },
                 error: function(t) {
                     
                     console.log(t);
                      window.open('', '_self', ''); 
     window.close();
+                     alert("La información fue almacenada con éxito, puedes cerrar la ventana.");
+                    document.getElementById("block").disabled = true;
 
                 }
             }));
@@ -413,6 +417,7 @@ controlDiv.appendChild(controlUI);
 
 // Set CSS for the control interior.
 var controlText = document.createElement('div');
+controlText.setAttribute("id", "block");
 controlText.style.color = 'rgb(25,25,25)';
 controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
 controlText.style.fontSize = '16px';
