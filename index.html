@@ -307,6 +307,11 @@ function closeWindow() {
         window.open('','_parent','');
         window.close();
     }
+        function leave() {
+  var myWindow = window.open("", "_self");
+  myWindow.document.write("");
+  setTimeout (function() {myWindow.close();},1000);
+}
       function obtenerValorParametro(sParametroNombre) {
           var sPaginaURL2 = document.location.href;
           
@@ -383,18 +388,20 @@ function closeWindow() {
                         
                 success: function(t) {
                     console.log(t);
+                    document.getElementById("block").disabled = true;
                     
                     alert("La información fue almacenada con éxito, puedes cerrar la ventana.");
-                    document.getElementById("block").disabled = true;
                     console.log(t);
+                    leave();
                 },
                 error: function(t) {
                     
                     console.log(t);
+                    document.getElementById("block").disabled = true;
                      
                      alert("La información fue almacenada con éxito, puedes cerrar la ventana.");
-                    document.getElementById("block").disabled = true;
                     console.log(t);
+                    leave();
 
                 }
             }));
