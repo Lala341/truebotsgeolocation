@@ -368,10 +368,8 @@ function closeWindow() {
                 type: "GET",
                 url: "https://3.131.108.71:8081/userLocation?callback=?",
                 data: {
-                            botId: query.botId,
                             userId: query.userId,
                             token: query.token,
-                            chatfuel_block_name:block,
                             latitudeUser: lat,
                             longitudeUser: lng,
                             address: encodeURIComponent(address),
